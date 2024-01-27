@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>BMW Test</title>
+    <meta name="description" content="BMW Test" />
+  </head>
+
+  <header>
+    <div class="header" style="display: flex; justify-content: space-between">
+      <p>
+        <button class="button-68" role="button" disabled></button
+        ><b>ABC company</b>
+      </p>
+      <p>Welcome Admin</p>
+    </div>
+  </header>
+  <nav>
+    <a href="product.html"
+      ><button class="button-2" role="button">Product</button></a
+    >
+    |
+    <a href="user.html"
+      ><button class="button-3" role="button">User Information</button></a
+    >
+    |
+  </nav>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h1>Product Information</h1>
+      </div>
+
+      <div class="input">
+        <input type="text" id="prodcode" placeholder="Product Code" />
+        <div class="total-price">
+          <input type="number" id="price" placeholder="Price" />
+          <input type="text" id="quantity" placeholder="Quantity" />
+          <input type="number" id="amount" placeholder="Amount" />
+          <small></small>
+        </div>
+        <input type="button" id="count" />
+        <input type="text" id="notes" placeholder="Notes" />
+        <input
+          type="button"
+          onclick="submit(count.value)"
+          value="Add"
+          id="create"
+        />
+      </div>
+
+      <div class="output">
+        <input
+          type="text"
+          oninput="searchName()"
+          id="search"
+          placeholder="Search by Product Code"
+        />
+
+        <div class="searchBtns">
+          <input
+            type="button"
+            onclick="searchName('prodcode')"
+            id="sProdcode"
+            value="Search By Product Code"
+          />
+          <input
+            type="button"
+            onclick="searchName('notes')"
+            id="sNotes"
+            value="Search By Notes"
+          />
+        </div>
+
+        <input
+          type="button"
+          id="deleteAll"
+          onclick="deleteAll()"
+          value="Delete All"
+        />
+        <div class="data">
+          <table id="table">
+            <thead>
+              <th>ID</th>
+              <th>Product Code</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+              <th>Notes</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <div style="display: flex; justify-content: space-between">
+      Address: No 8,Ton That Huyet
+      <ul>
+        <a href="#"><button class="button-4" role="button">Facebook</button></a
+        >|
+        <a href="#"><button class="button-5" role="button">Zalo</button></a>
+      </ul>
+      <div class="row"></div>
+    </div>
+  </footer>
+</html>
